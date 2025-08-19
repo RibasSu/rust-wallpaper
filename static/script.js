@@ -343,12 +343,24 @@ function HSVtoRGB(h, s, v) {
   let q = v * (1 - f * s);
   let t = v * (1 - (1 - f) * s);
   switch (i % 6) {
-    case 0: r = v, g = t, b = p; break;
-    case 1: r = q, g = v, b = p; break;
-    case 2: r = p, g = v, b = t; break;
-    case 3: r = p, g = q, b = v; break;
-    case 4: r = t, g = p, b = v; break;
-    case 5: r = v, g = p, b = q; break;
+    case 0:
+      (r = v), (g = t), (b = p);
+      break;
+    case 1:
+      (r = q), (g = v), (b = p);
+      break;
+    case 2:
+      (r = p), (g = v), (b = t);
+      break;
+    case 3:
+      (r = p), (g = q), (b = v);
+      break;
+    case 4:
+      (r = t), (g = p), (b = v);
+      break;
+    case 5:
+      (r = v), (g = p), (b = q);
+      break;
   }
   return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
@@ -369,13 +381,16 @@ function animateIntensity() {
     hue = colorStops[0] + (colorStops[1] - colorStops[0]) * (cycle / 0.25);
   } else if (cycle < 0.5) {
     // Verde para Azul
-    hue = colorStops[1] + (colorStops[2] - colorStops[1]) * ((cycle - 0.25) / 0.25);
+    hue =
+      colorStops[1] + (colorStops[2] - colorStops[1]) * ((cycle - 0.25) / 0.25);
   } else if (cycle < 0.75) {
     // Azul para Violeta
-    hue = colorStops[2] + (colorStops[3] - colorStops[2]) * ((cycle - 0.5) / 0.25);
+    hue =
+      colorStops[2] + (colorStops[3] - colorStops[2]) * ((cycle - 0.5) / 0.25);
   } else {
     // Violeta para Vermelho
-    hue = colorStops[3] + (colorStops[4] - colorStops[3]) * ((cycle - 0.75) / 0.25);
+    hue =
+      colorStops[3] + (colorStops[4] - colorStops[3]) * ((cycle - 0.75) / 0.25);
   }
   let [rVal, gVal, bVal] = HSVtoRGB(hue, 1, 1);
   r = rVal;
@@ -388,12 +403,12 @@ function animateIntensity() {
 animateIntensity();
 
 function resizeCanvas() {
-  var canvas = document.getElementById('canvasOne');
+  var canvas = document.getElementById("canvasOne");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-window.addEventListener('resize', resizeCanvas);
-window.addEventListener('load', function() {
+window.addEventListener("resize", resizeCanvas);
+window.addEventListener("load", function () {
   resizeCanvas();
   windowLoadHandler();
 });
