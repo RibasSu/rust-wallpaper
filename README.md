@@ -19,6 +19,7 @@ Esta é uma aplicação web em Rust que serve uma animação de partículas 3D c
 ## 🚀 Instalação Rápida
 
 ### Opção 1: Usando Make (recomendado)
+
 ```bash
 # Ver comandos disponíveis
 make help
@@ -31,6 +32,7 @@ make status
 ```
 
 ### Opção 2: Scripts manuais
+
 ```bash
 # Build para produção
 ./build.sh
@@ -42,6 +44,7 @@ sudo ./install.sh
 ## 🎮 Uso
 
 ### Desenvolvimento
+
 ```bash
 # Executar localmente
 make run
@@ -53,6 +56,7 @@ make dev
 ```
 
 ### Produção (após instalação)
+
 ```bash
 # Executar diretamente
 rust-wallpaper
@@ -101,7 +105,7 @@ rust-wallpaper/
 
 A aplicação aceita as seguintes variáveis de ambiente:
 
-- `PORT`: Porta do servidor (padrão: 3050)
+- `PORT`: Porta do servidor (padrão: 56901)
 - `RUST_LOG`: Nível de log (padrão: info)
 
 ```bash
@@ -112,6 +116,7 @@ PORT=8080 RUST_LOG=debug rust-wallpaper
 ## 📦 Build Otimizado
 
 O build de produção inclui otimizações avançadas:
+
 - Link-time optimization (LTO)
 - Strip de símbolos de debug
 - Otimização de tamanho
@@ -130,8 +135,9 @@ sudo ./uninstall.sh
 ## 🌐 Acesso
 
 Depois de instalado e rodando, acesse:
-- **Local**: http://localhost:3050
-- **Rede**: http://[seu-ip]:3050
+
+- **Local**: http://localhost:56901
+- **Rede**: http://[seu-ip]:56901
 
 ## 💡 Dicas
 

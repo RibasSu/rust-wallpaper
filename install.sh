@@ -40,7 +40,7 @@ User=nobody
 ExecStart=$INSTALL_DIR/$BINARY_NAME
 Restart=always
 RestartSec=10
-Environment=PORT=3050
+Environment=PORT=56901
 Environment=RUST_LOG=info
 
 [Install]
@@ -61,4 +61,4 @@ echo "  Habilitar na inicialização: sudo systemctl enable $SERVICE_NAME"
 echo "  Desabilitar na inicialização: sudo systemctl disable $SERVICE_NAME"
 echo "  Ver logs:                 sudo journalctl -u $SERVICE_NAME -f"
 echo ""
-echo "🌐 Acesse http://localhost:3050 quando estiver rodando"
+echo "🌐 Acesse http://localhost:56901 quando estiver rodando"

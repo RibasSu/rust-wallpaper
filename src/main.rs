@@ -29,9 +29,9 @@ async fn main() -> io::Result<()> {
     env_logger::init_from_env(env_logger::Env::new().default_filter_or("info"));
 
     let port = std::env::var("PORT")
-        .unwrap_or_else(|_| "3050".to_string())
+        .unwrap_or_else(|_| "56901".to_string())
         .parse()
-        .unwrap_or(3050);
+        .unwrap_or(56901);
     
     println!("🚀 Servidor rodando na porta {}", port);
     println!("📱 Acesse: http://localhost:{}", port);
